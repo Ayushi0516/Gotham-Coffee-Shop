@@ -27,12 +27,14 @@ export const Navbar = () => {
   const [flag, setFlag] = useBoolean(false);
 
   return (
-    <Box h="10vh"  bgColor="teal" color="white">
+    <Box h="10vh" bgColor="teal" color="white">
       <Box pos="fixed" top="1rem" right="1rem" align="center">
         <Flex display={{ base: "none", md: "flex" }}>
           {links.map((link) => (
             <Link to={link.to}>
-              <Button _hover="black"  variant="ghost" >{link.label}</Button>
+              <Button _hover="black" variant="ghost">
+                {link.label}
+              </Button>
             </Link>
           ))}
         </Flex>
@@ -60,15 +62,14 @@ export const Navbar = () => {
               ></IconButton>
             </Box>
           </Flex>
-        
-            <Flex direction="column" align="center" marginTop="3rem">
-              {links.map((link) => (
-                <Link to={link.to}>
-                  <Button variant="ghost">{link.label}</Button>
-                </Link>
-              ))}
-            </Flex>
-         
+
+          <Flex direction="column" align="center" marginTop="3rem">
+            {links.map((link) => (
+              <Link to={link.to}>
+                <Button variant="ghost">{link.label}</Button>
+              </Link>
+            ))}
+          </Flex>
         </Box>
       )}
     </Box>
