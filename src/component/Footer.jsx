@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <VStack py={10} bg="gray.200" mt={4}>
       <Flex align="center" justify="center">
-        <SimpleGrid spacing="2rem" column={{ base: 2, md: 3, lg: 4 }}>
+        <SimpleGrid spacing="2rem" columns={{ base: 2, md: 3, lg: 4 }}>
           {dummyLink.map((el) => (
             <Link>
             <Button variant={"ghost"}>{el}</Button>

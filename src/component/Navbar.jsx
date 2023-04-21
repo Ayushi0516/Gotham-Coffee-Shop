@@ -50,6 +50,7 @@ export const Navbar = () => {
           pos="fixed"
           w="100vw"
           h="100vh"
+          top="0"
           bgColor="white"
           zIndex="20"
           overflow="auto"
@@ -63,15 +64,16 @@ export const Navbar = () => {
             </Box>
           </Flex>
 
-          <Flex direction="column" align="center" marginTop="3rem">
+          <Flex direction="column" justify="center" align="center" marginTop="3rem" gap="20px">
+          
             {links.map((link) => (
-              <Link to={link.to}>
-                <Button variant="ghost">{link.label}</Button>
+              <Link  key={link.to} to={link.to}>
+                <Button colorScheme='teal' >{link.label}</Button>
               </Link>
             ))}
           </Flex>
         </Box>
-      )}
+       )}
     </Box>
   );
 };
